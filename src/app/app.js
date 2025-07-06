@@ -17,6 +17,7 @@ const categories = [
 import emissionFactors from "./data.js";
 
 const data = emissionFactors; 
+const selectedItems = [];
 
 // console.log("data", data)
 // console.log(data['Transportation'].map(item=>item))
@@ -73,43 +74,69 @@ const fromSections = document.querySelector('.form-sections');
 
 // generateModesBy() 
 
-  for(const category in categories)
-    {   
-    const heading = document.createElement('h4') 
-    const optionsArticle = document.createElement('article'); 
-    // const optionElement = document.createElement('')  
+for (const category in categories) {
+  const heading = document.createElement('h4');
+  const optionsArticle = document.createElement('article'); 
 
+  
+  const currentId = `scrollspyHeading${category}`;
+
+  heading.textContent = categories[category];
+  heading.id = currentId;
+  fromSections.appendChild(heading);
+
+  // Get the corresponding emission factors for this category
+  const emissionItems = data[categories[category]];
+
+  emissionItems.forEach((categoryItem, index) => {
+    const itemContainer = document.createElement('article')
+    const id = `btn-check-${index + category}`;
     
-    const currentId = `scrollspyHeading${category}`
-
-    heading.textContent = categories[category]
-    heading.id = currentId;   
-    fromSections.appendChild(heading) 
-
-    // console.log(data[categories[category]])
-
-    data[categories[category]].map((categoryItem, index) =>{ 
-
-    const id = `btn-check-${index}`
-    const emittingItem = document.createElement('input'); 
-     
+    // Create checkbox input
+    const emittingItem = document.createElement('input');
     emittingItem.type = "checkbox";
-    emittingItem.classList.add('btn-check'); 
+    emittingItem.classList.add('btn-check');
     emittingItem.id = id;
-    emittingItem.autocomplete = "off";  
-
-    const label = document.createElement('label');
-    label.classList.add('btn'); 
-    label.setAttribute('for', id); 
-    label.textContent = categoryItem.item || categoryItem.mode || categoryItem.activity 
-
-    optionsArticle.appendChild(emittingItem); 
-    optionsArticle.appendChild(label) 
+    emittingItem.autocomplete = "off";
     
-    }) 
+    // Create label with icon
+    const label = document.createElement('label');
+    label.classList.add('btn','d-flex',);
+    label.setAttribute('for', id);
+    
+    // Create icon span
+    const iconSpan = document.createElement('span');
+    iconSpan.innerHTML = categoryItem.icon || ''; // Use the icon from your data
+    iconSpan.classList.add('me-2'); // Add margin between icon and text
+    
+    // Create text span
+    const textSpan = document.createElement('span');
+    textSpan.textContent = categoryItem.item || categoryItem.mode || categoryItem.activity; 
 
-    fromSections.appendChild(optionsArticle)
+    //item container 
+    itemContainer.appendChild(iconSpan) 
+    itemContainer.appendChild(textSpan)
+    itemContainer.classList.add('d-flex', 'flex-column', 'gap-5','justify-content-center', 'align-items-center')
+    
+    // Append icon and text to label
+    label.appendChild(itemContainer);
+    // label.appendChild(textSpan);
+    
+    // Append elements to article
+    optionsArticle.appendChild(emittingItem);
+    optionsArticle.appendChild(label); 
 
-        // console.log("-->", categories[category], category, ) 
-        
-    }
+    optionsArticle.classList.add('d-flex', 'justify-content-center', 'align-items-center')
+    
+    // Add click handler to store the selected item
+    // label.addEventListener('click', () => {
+    //   selectedItems.push({
+    //     ...categoryItem,
+    //     category: categories[category]
+    //   });
+    //   updateSelectedItemsDisplay();
+    // });
+  });
+
+  fromSections.appendChild(optionsArticle);
+}

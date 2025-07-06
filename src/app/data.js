@@ -2,6 +2,7 @@ const emissionFactors = {
   "Transportation": [
     {
       "mode": "Petrol Car",
+      "icon": "<i class='fas fa-car'></i>",
       "factor": 0.17,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -10,6 +11,7 @@ const emissionFactors = {
     },
     {
       "mode": "Diesel Car",
+      "icon": "<i class='fas fa-car'></i>",
       "factor": 0.17,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -18,6 +20,7 @@ const emissionFactors = {
     },
     {
       "mode": "Electric Car",
+      "icon": "<i class='fas fa-car'></i>",
       "factor": 0.15,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -26,6 +29,7 @@ const emissionFactors = {
     },
     {
       "mode": "Motorcycle",
+      "icon": "<i class='fas fa-motorcycle'></i>",
       "factor": 0.11,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -34,6 +38,7 @@ const emissionFactors = {
     },
     {
       "mode": "City Bus",
+      "icon": "<i class='fas fa-bus'></i>",
       "factor": 0.089,
       "unit_input": "passenger-km",
       "unit_output": "kg CO₂",
@@ -42,6 +47,7 @@ const emissionFactors = {
     },
     {
       "mode": "Coach Bus",
+      "icon": "<i class='fas fa-bus'></i>",
       "factor": 0.08,
       "unit_input": "passenger-km",
       "unit_output": "kg CO₂",
@@ -50,6 +56,7 @@ const emissionFactors = {
     },
     {
       "mode": "Commuter Rail",
+      "icon": "<i class='fas fa-train'></i>",
       "factor": 0.035,
       "unit_input": "passenger-km",
       "unit_output": "kg CO₂",
@@ -58,6 +65,7 @@ const emissionFactors = {
     },
     {
       "mode": "Domestic Flight",
+      "icon": "<i class='fas fa-plane'></i>",
       "factor": 0.25,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -66,6 +74,7 @@ const emissionFactors = {
     },
     {
       "mode": "International Flight",
+      "icon": "<i class='fas fa-plane'></i>",
       "factor": 0.12,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -74,6 +83,7 @@ const emissionFactors = {
     },
     {
       "mode": "Subway/Metro",
+      "icon": "<i class='fas fa-subway'></i>",
       "factor": 0.03,
       "unit_input": "passenger-km",
       "unit_output": "kg CO₂",
@@ -82,6 +92,7 @@ const emissionFactors = {
     },
     {
       "mode": "Taxi/Uber",
+      "icon": "<i class='fas fa-taxi'></i>",
       "factor": 0.17,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -90,6 +101,7 @@ const emissionFactors = {
     },
     {
       "mode": "Walking/Cycling",
+      "icon": "<i class='fas fa-walking'></i>",
       "factor": 0.0,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -100,6 +112,7 @@ const emissionFactors = {
   "Food and Diet": [
     {
       "item": "Beef",
+      "icon": "<i class='fas fa-drumstick-bite'></i>",
       "factor": 60,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -108,6 +121,7 @@ const emissionFactors = {
     },
     {
       "item": "Lamb/Mutton",
+      "icon": "<i class='fas fa-drumstick-bite'></i>",
       "factor": 30,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -116,6 +130,7 @@ const emissionFactors = {
     },
     {
       "item": "Pork",
+      "icon": "<i class='fas fa-drumstick-bite'></i>",
       "factor": 7,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -124,6 +139,7 @@ const emissionFactors = {
     },
     {
       "item": "Poultry",
+      "icon": "<i class='fas fa-drumstick-bite'></i>",
       "factor": 6,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -132,6 +148,7 @@ const emissionFactors = {
     },
     {
       "item": "Cheese",
+      "icon": "<i class='fas fa-cheese'></i>",
       "factor": 21,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -140,6 +157,7 @@ const emissionFactors = {
     },
     {
       "item": "Milk (Cow)",
+      "icon": "<i class='fas fa-wine-bottle'></i>",
       "factor": 1.5,
       "unit_input": "liters",
       "unit_output": "kg CO₂e",
@@ -148,6 +166,7 @@ const emissionFactors = {
     },
     {
       "item": "Eggs",
+      "icon": "<i class='fas fa-egg'></i>",
       "factor": 4,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -156,6 +175,7 @@ const emissionFactors = {
     },
     {
       "item": "Vegetables/Fruits",
+      "icon": "<i class='fas fa-carrot'></i>",
       "factor": 1.5,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -164,6 +184,7 @@ const emissionFactors = {
     },
     {
       "item": "Legumes/Beans",
+      "icon": "<i class='fas fa-seedling'></i>",
       "factor": 1.5,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -172,6 +193,7 @@ const emissionFactors = {
     },
     {
       "item": "Rice (paddy)",
+      "icon": "<i class='fas fa-bread-slice'></i>",
       "factor": 2.7,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -180,6 +202,7 @@ const emissionFactors = {
     },
     {
       "item": "Grains/Bread",
+      "icon": "<i class='fas fa-bread-slice'></i>",
       "factor": 1.5,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -188,6 +211,7 @@ const emissionFactors = {
     },
     {
       "item": "Coffee",
+      "icon": "<i class='fas fa-coffee'></i>",
       "factor": 0.15,
       "unit_input": "cup",
       "unit_output": "kg CO₂e",
@@ -196,6 +220,7 @@ const emissionFactors = {
     },
     {
       "item": "Tea",
+      "icon": "<i class='fas fa-mug-hot'></i>",
       "factor": 0.03,
       "unit_input": "cup",
       "unit_output": "kg CO₂e",
@@ -204,6 +229,7 @@ const emissionFactors = {
     },
     {
       "item": "Beer",
+      "icon": "<i class='fas fa-beer'></i>",
       "factor": 0.18,
       "unit_input": "500ml",
       "unit_output": "kg CO₂e",
@@ -212,6 +238,7 @@ const emissionFactors = {
     },
     {
       "item": "Wine",
+      "icon": "<i class='fas fa-wine-glass-alt'></i>",
       "factor": 0.35,
       "unit_input": "liter",
       "unit_output": "kg CO₂e",
@@ -220,6 +247,7 @@ const emissionFactors = {
     },
     {
       "item": "Food Waste",
+      "icon": "<i class='fas fa-trash'></i>",
       "factor": 21,
       "unit_input": "kg",
       "unit_output": "kg CO₂e",
@@ -230,6 +258,7 @@ const emissionFactors = {
   "Home Energy Use": [
     {
       "activity": "Electricity Use (SA Grid)",
+      "icon": "<i class='fas fa-bolt'></i>",
       "factor": 0.97,
       "unit_input": "kWh",
       "unit_output": "kg CO₂",
@@ -238,6 +267,7 @@ const emissionFactors = {
     },
     {
       "activity": "Gas Heating (LPG)",
+      "icon": "<i class='fas fa-fire'></i>",
       "factor": 2.7,
       "unit_input": "liter",
       "unit_output": "kg CO₂",
@@ -246,6 +276,7 @@ const emissionFactors = {
     },
     {
       "activity": "Water Heating",
+      "icon": "<i class='fas fa-water'></i>",
       "factor": 0.97,
       "unit_input": "kWh",
       "unit_output": "kg CO₂",
@@ -254,6 +285,7 @@ const emissionFactors = {
     },
     {
       "activity": "Electric Stove/Oven",
+      "icon": "<i class='fas fa-temperature-high'></i>",
       "factor": 0.97,
       "unit_input": "kWh",
       "unit_output": "kg CO₂",
@@ -262,6 +294,7 @@ const emissionFactors = {
     },
     {
       "activity": "Lighting (LED)",
+      "icon": "<i class='fas fa-lightbulb'></i>",
       "factor": 0.05,
       "unit_input": "kWh",
       "unit_output": "kg CO₂",
@@ -270,6 +303,7 @@ const emissionFactors = {
     },
     {
       "activity": "Refrigerator",
+      "icon": "<i class='fas fa-snowflake'></i>",
       "factor": 1,
       "unit_input": "kWh/day",
       "unit_output": "kg CO₂",
@@ -278,6 +312,7 @@ const emissionFactors = {
     },
     {
       "activity": "Washing Machine",
+      "icon": "<i class='fas fa-tshirt'></i>",
       "factor": 0.4,
       "unit_input": "wash",
       "unit_output": "kg CO₂",
@@ -286,6 +321,7 @@ const emissionFactors = {
     },
     {
       "activity": "Tumble Dryer",
+      "icon": "<i class='fas fa-wind'></i>",
       "factor": 2.5,
       "unit_input": "cycle",
       "unit_output": "kg CO₂",
@@ -294,6 +330,7 @@ const emissionFactors = {
     },
     {
       "activity": "Dishwasher",
+      "icon": "<i class='fas fa-utensils'></i>",
       "factor": 0.85,
       "unit_input": "load",
       "unit_output": "kg CO₂",
@@ -302,6 +339,7 @@ const emissionFactors = {
     },
     {
       "activity": "Laptop",
+      "icon": "<i class='fas fa-laptop'></i>",
       "factor": 0.05,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -310,6 +348,7 @@ const emissionFactors = {
     },
     {
       "activity": "Smartphone",
+      "icon": "<i class='fas fa-mobile-alt'></i>",
       "factor": 0.005,
       "unit_input": "charge",
       "unit_output": "kg CO₂",
@@ -320,6 +359,7 @@ const emissionFactors = {
   "Consumption and Waste": [
     {
       "item": "T-shirt",
+      "icon": "<i class='fas fa-tshirt'></i>",
       "factor": 7,
       "unit_input": "item",
       "unit_output": "kg CO₂",
@@ -328,6 +368,7 @@ const emissionFactors = {
     },
     {
       "item": "Jeans",
+      "icon": "<i class='fas fa-tshirt'></i>",
       "factor": 22.5,
       "unit_input": "item",
       "unit_output": "kg CO₂",
@@ -336,6 +377,7 @@ const emissionFactors = {
     },
     {
       "item": "Fast-fashion Garment",
+      "icon": "<i class='fas fa-tshirt'></i>",
       "factor": 7.5,
       "unit_input": "item",
       "unit_output": "kg CO₂",
@@ -344,6 +386,7 @@ const emissionFactors = {
     },
     {
       "item": "Smartphone",
+      "icon": "<i class='fas fa-mobile-alt'></i>",
       "factor": 70,
       "unit_input": "item",
       "unit_output": "kg CO₂",
@@ -352,6 +395,7 @@ const emissionFactors = {
     },
     {
       "item": "Laptop",
+      "icon": "<i class='fas fa-laptop'></i>",
       "factor": 225,
       "unit_input": "item",
       "unit_output": "kg CO₂",
@@ -360,6 +404,7 @@ const emissionFactors = {
     },
     {
       "item": "Tablet",
+      "icon": "<i class='fas fa-tablet-alt'></i>",
       "factor": 100,
       "unit_input": "item",
       "unit_output": "kg CO₂",
@@ -368,6 +413,7 @@ const emissionFactors = {
     },
     {
       "item": "Plastic Bag",
+      "icon": "<i class='fas fa-shopping-bag'></i>",
       "factor": 0.2,
       "unit_input": "bag",
       "unit_output": "kg CO₂",
@@ -376,6 +422,7 @@ const emissionFactors = {
     },
     {
       "item": "Paper Bag",
+      "icon": "<i class='fas fa-shopping-bag'></i>",
       "factor": 0.125,
       "unit_input": "bag",
       "unit_output": "kg CO₂",
@@ -384,6 +431,7 @@ const emissionFactors = {
     },
     {
       "item": "PET Bottle (500ml)",
+      "icon": "<i class='fas fa-wine-bottle'></i>",
       "factor": 0.06,
       "unit_input": "bottle",
       "unit_output": "kg CO₂",
@@ -392,6 +440,7 @@ const emissionFactors = {
     },
     {
       "item": "Packaging",
+      "icon": "<i class='fas fa-box-open'></i>",
       "factor": 1.5,
       "unit_input": "kg",
       "unit_output": "kg CO₂",
@@ -400,6 +449,7 @@ const emissionFactors = {
     },
     {
       "item": "Paper",
+      "icon": "<i class='fas fa-file-alt'></i>",
       "factor": 1.3,
       "unit_input": "kg",
       "unit_output": "kg CO₂",
@@ -408,6 +458,7 @@ const emissionFactors = {
     },
     {
       "item": "Disposable Cup",
+      "icon": "<i class='fas fa-coffee'></i>",
       "factor": 0.05,
       "unit_input": "cup",
       "unit_output": "kg CO₂",
@@ -416,6 +467,7 @@ const emissionFactors = {
     },
     {
       "item": "Car Manufacturing",
+      "icon": "<i class='fas fa-car'></i>",
       "factor": 6000,
       "unit_input": "car",
       "unit_output": "kg CO₂",
@@ -424,6 +476,7 @@ const emissionFactors = {
     },
     {
       "item": "Cement",
+      "icon": "<i class='fas fa-industry'></i>",
       "factor": 0.9,
       "unit_input": "kg",
       "unit_output": "kg CO₂",
@@ -432,6 +485,7 @@ const emissionFactors = {
     },
     {
       "item": "Steel",
+      "icon": "<i class='fas fa-hammer'></i>",
       "factor": 1.85,
       "unit_input": "kg",
       "unit_output": "kg CO₂",
@@ -440,6 +494,7 @@ const emissionFactors = {
     },
     {
       "item": "Plastic Recycling",
+      "icon": "<i class='fas fa-recycle'></i>",
       "factor": -2.5,
       "unit_input": "kg",
       "unit_output": "kg CO₂ saved",
@@ -450,6 +505,7 @@ const emissionFactors = {
   "Water Usage": [
     {
       "activity": "Shower",
+      "icon": "<i class='fas fa-shower'></i>",
       "factor": 0.115,
       "unit_input": "minute",
       "unit_output": "kg CO₂",
@@ -458,6 +514,7 @@ const emissionFactors = {
     },
     {
       "activity": "Bath",
+      "icon": "<i class='fas fa-bath'></i>",
       "factor": 1.5,
       "unit_input": "bath",
       "unit_output": "kg CO₂",
@@ -466,6 +523,7 @@ const emissionFactors = {
     },
     {
       "activity": "Handwashing Dishes",
+      "icon": "<i class='fas fa-hand-holding-water'></i>",
       "factor": 0.6,
       "unit_input": "10L session",
       "unit_output": "kg CO₂",
@@ -474,6 +532,7 @@ const emissionFactors = {
     },
     {
       "activity": "Dishwasher",
+      "icon": "<i class='fas fa-utensils'></i>",
       "factor": 0.85,
       "unit_input": "load",
       "unit_output": "kg CO₂",
@@ -482,6 +541,7 @@ const emissionFactors = {
     },
     {
       "activity": "Laundry (wash only)",
+      "icon": "<i class='fas fa-tshirt'></i>",
       "factor": 0.4,
       "unit_input": "wash",
       "unit_output": "kg CO₂",
@@ -490,6 +550,7 @@ const emissionFactors = {
     },
     {
       "activity": "Bottled Water",
+      "icon": "<i class='fas fa-wine-bottle'></i>",
       "factor": 0.5,
       "unit_input": "liter",
       "unit_output": "kg CO₂",
@@ -500,6 +561,7 @@ const emissionFactors = {
   "Digital Habits": [
     {
       "activity": "Video Streaming",
+      "icon": "<i class='fas fa-film'></i>",
       "factor": 0.045,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -508,6 +570,7 @@ const emissionFactors = {
     },
     {
       "activity": "Music Streaming",
+      "icon": "<i class='fas fa-music'></i>",
       "factor": 0.001,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -516,6 +579,7 @@ const emissionFactors = {
     },
     {
       "activity": "Email (short)",
+      "icon": "<i class='fas fa-envelope'></i>",
       "factor": 0.00025,
       "unit_input": "email",
       "unit_output": "kg CO₂",
@@ -524,6 +588,7 @@ const emissionFactors = {
     },
     {
       "activity": "Email (long)",
+      "icon": "<i class='fas fa-envelope-open-text'></i>",
       "factor": 0.017,
       "unit_input": "email",
       "unit_output": "kg CO₂",
@@ -532,6 +597,7 @@ const emissionFactors = {
     },
     {
       "activity": "Video Conferencing",
+      "icon": "<i class='fas fa-video'></i>",
       "factor": 0.01,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -540,6 +606,7 @@ const emissionFactors = {
     },
     {
       "activity": "Cloud Storage",
+      "icon": "<i class='fas fa-cloud'></i>",
       "factor": 0.2,
       "unit_input": "GB-year",
       "unit_output": "kg CO₂",
@@ -548,6 +615,7 @@ const emissionFactors = {
     },
     {
       "activity": "Web/Social",
+      "icon": "<i class='fas fa-globe'></i>",
       "factor": 0.02,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -556,6 +624,7 @@ const emissionFactors = {
     },
     {
       "activity": "Gaming",
+      "icon": "<i class='fas fa-gamepad'></i>",
       "factor": 0.2,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -566,6 +635,7 @@ const emissionFactors = {
   "Work and Commuting": [
     {
       "activity": "Commute (Car)",
+      "icon": "<i class='fas fa-car'></i>",
       "factor": 0.17,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -574,6 +644,7 @@ const emissionFactors = {
     },
     {
       "activity": "Commute (Train)",
+      "icon": "<i class='fas fa-train'></i>",
       "factor": 0.035,
       "unit_input": "km",
       "unit_output": "kg CO₂",
@@ -582,6 +653,7 @@ const emissionFactors = {
     },
     {
       "activity": "Business Flight",
+      "icon": "<i class='fas fa-plane'></i>",
       "factor": 250,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -590,6 +662,7 @@ const emissionFactors = {
     },
     {
       "activity": "Remote Work",
+      "icon": "<i class='fas fa-home'></i>",
       "factor": 0.0,
       "unit_input": "day",
       "unit_output": "kg CO₂",
@@ -598,6 +671,7 @@ const emissionFactors = {
     },
     {
       "activity": "Office Lighting",
+      "icon": "<i class='fas fa-lightbulb'></i>",
       "factor": 0.1,
       "unit_input": "hour",
       "unit_output": "kg CO₂",
@@ -606,6 +680,7 @@ const emissionFactors = {
     },
     {
       "activity": "Paper Use",
+      "icon": "<i class='fas fa-file-alt'></i>",
       "factor": 1.3,
       "unit_input": "kg",
       "unit_output": "kg CO₂",
@@ -613,6 +688,6 @@ const emissionFactors = {
       "default_input": 0.1
     }
   ]
-}; 
+};
 
-export default emissionFactors; 
+export default emissionFactors;

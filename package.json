@@ -1,0 +1,20 @@
+{
+  "name": "carbon-footprint-logger",
+  "version": "1.0.0",
+  "description": "This is a Carbon Footprint Logger progran",
+  "homepage": "https://github.com/phiweCode/Carbon-Footprint-Logger#readme",
+  "bugs": {
+    "url": "https://github.com/phiweCode/Carbon-Footprint-Logger/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phiweCode/Carbon-Footprint-Logger.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "src/app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

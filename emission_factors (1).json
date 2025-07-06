@@ -1,0 +1,62 @@
+{
+  "Transportation": [
+    {
+      "mode": "Petrol Car",
+      "factor": 0.17,
+      "unit_input": "km",
+      "unit_output": "kg CO\u2082",
+      "description": "Emissions from driving a petrol car",
+      "default_input": 1
+    },
+    {
+      "mode": "Diesel Car",
+      "factor": 0.17,
+      "unit_input": "km",
+      "unit_output": "kg CO\u2082",
+      "description": "Emissions from driving a diesel car",
+      "default_input": 1
+    },
+    {
+      "mode": "Electric Car",
+      "factor": 0.15,
+      "unit_input": "km",
+      "unit_output": "kg CO\u2082",
+      "description": "Emissions from driving an electric car (SA grid)",
+      "default_input": 1
+    },
+    {
+      "mode": "Motorcycle",
+      "factor": 0.11,
+      "unit_input": "km",
+      "unit_output": "kg CO\u2082",
+      "description": "Emissions from riding a motorcycle",
+      "default_input": 1
+    },
+    {
+      "mode": "City Bus",
+      "factor": 0.089,
+      "unit_input": "passenger-km",
+      "unit_output": "kg CO\u2082",
+      "description": "Emissions per passenger-km on a city bus",
+      "default_input": 1
+    }
+  ],
+  "Food and Diet": [
+    {
+      "item": "Beef",
+      "factor": 60,
+      "unit_input": "kg",
+      "unit_output": "kg CO\u2082e",
+      "description": "Emissions per kg of beef (including methane)",
+      "default_input": 0.1
+    },
+    {
+      "item": "Lamb/Mutton",
+      "factor": 30,
+      "unit_input": "kg",
+      "unit_output": "kg CO\u2082e",
+      "description": "Emissions per kg of lamb or mutton",
+      "default_input": 0.1
+    }
+  ]
+}

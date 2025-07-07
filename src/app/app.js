@@ -1,8 +1,3 @@
-// import { readFileSync } from 'fs';
-// const rawData = readFileSync('resources/emission_factors.json', 'utf8');
-// const data = JSON.parse(rawData);
-// console.log(data); 
-
 const categories = [
   'Transportation',
   'Food and Diet',
@@ -13,151 +8,105 @@ const categories = [
   'Work and Commuting'
 ]
 
-// console.log(categories)
-import emissionFactors from "./data.js"; 
-
-
-const data = emissionFactors; 
+import emissionFactors from "./data.js";
+const data = emissionFactors;
 const selectedItems = [];
 const form = document.getElementsByName('form'); 
-// console.log("data", data)
-// console.log(data['Transportation'].map(item=>item))
+const activityContext = document.getElementById('activity-chart'); 
 
-// console.log(categories) 
+
 const fromSections = document.querySelector('.form-sections'); 
+const summaryAnalytics = (data) => { 
 
-// const generateModesBy = () => {  
-
-//     for(const category in categories)
-//     {   
-//     const heading = document.createElement('h4') 
-//     const optionsArticle = document.createElement('article'); 
-//     const optionElement = document.createElement('')  
-
-    
-//     const currentId = `scrollspyHeading${category + 1}`
-
-//     heading.textContent = categories[category]
-//     heading.id = currentId;   
-//     optionsArticle.appendChild(heading)
-
-//     data[categories[category]].map((categoryItem, index) =>{ 
-   
-//     const id = `btn-check-${index+1}`
-//     const emittingItem = document.createElement('input'); 
-     
-//     emittingItem.type = "checkbox";
-//     emittingItem.classList.add('btn-check'); 
-//     emittingItem.id = id;
-//     emittingItem.autocomplete = "off";  
-
-//     const label = document.createElement('label');
-//     label.classList.add('btn'); 
-//     label.for = id; 
-//     label.textContent = categoryItem.item 
-
-//     optionsArticle.appendChild(emittingItem); 
-//     optionsArticle.appendChild(label) 
-
-//     })
-
- 
+    const activityData = { 
+      labels: Object.keys(data), 
+      datasets: [{
+        label: 'My carbon footprint activities', 
+        data: Object.values(data).map(point=>point.split(',')[0]), 
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1
+      }]
+    } 
+    const activityConfig = { 
+      type: 'line', 
+      data: activityData
+    }  
+    new Chart(activityContext, activityConfig) 
 
     
 
+    console.log(activityData)
 
-//         console.log("-->", categories[category], category, data[categories[category]]) 
-        
-//     }
-    
-
-// }  
-
-// generateModesBy() 
+}
 
 for (const category in categories) {
   const heading = document.createElement('h4');
-  const optionsArticle = document.createElement('article'); 
-
-  
+  const optionsArticle = document.createElement('article');
   const currentId = `scrollspyHeading${category}`;
 
   heading.textContent = categories[category];
   heading.id = currentId;
   fromSections.appendChild(heading);
 
-  // Get the corresponding emission factors for this category
   const emissionItems = data[categories[category]];
 
   emissionItems.forEach((categoryItem, index) => {
     const itemContainer = document.createElement('article')
     const id = `btn-check-${index + category}`;
-    
-    // Create checkbox input
+
     const emittingItem = document.createElement('input');
     emittingItem.type = "checkbox";
     emittingItem.classList.add('btn-check');
     emittingItem.id = id;
     emittingItem.autocomplete = "off";
-    emittingItem.value = [ categoryItem.factor , categories[category]]; 
     emittingItem.name = categoryItem.item || categoryItem.mode || categoryItem.activity;
-    
-    // Create label with icon
+    emittingItem.value = [categoryItem.factor, categories[category]];
+
+
     const label = document.createElement('label');
-    label.classList.add('btn','d-flex',);
+    label.classList.add('btn', 'd-flex',);
     label.setAttribute('for', id);
-    
-    // Create icon span
+
     const iconSpan = document.createElement('span');
-    iconSpan.innerHTML = categoryItem.icon || ''; // Use the icon from your data
-    iconSpan.classList.add('me-2'); // Add margin between icon and text
-    
-    // Create text span
+    iconSpan.innerHTML = categoryItem.icon || '';
+    iconSpan.classList.add('me-2');
+
     const textSpan = document.createElement('span');
-    textSpan.textContent = categoryItem.item || categoryItem.mode || categoryItem.activity;  
+    textSpan.textContent = categoryItem.item || categoryItem.mode || categoryItem.activity;
 
-    //add carbon-foot-print-text
-    const carbonEmissionVal = document.createElement('h5'); 
-    carbonEmissionVal.textContent = categoryItem.factor + categoryItem["unit_output"] 
+    const carbonEmissionVal = document.createElement('h5');
+    carbonEmissionVal.textContent = categoryItem.factor + categoryItem["unit_output"]
 
-    //item container 
-    itemContainer.appendChild(iconSpan) 
-    itemContainer.appendChild(carbonEmissionVal) 
+    itemContainer.appendChild(iconSpan)
+    itemContainer.appendChild(carbonEmissionVal)
     itemContainer.appendChild(textSpan)
-    itemContainer.classList.add('d-flex', 'flex-column', 'gap-3','justify-content-center', 'align-items-center')
-    
-    // Append icon and text to label
+    itemContainer.classList.add('d-flex', 'flex-column', 'gap-3', 'justify-content-center', 'align-items-center')
+
     label.appendChild(itemContainer);
-    // label.appendChild(textSpan);
-    
-    // Append elements to article
+
     optionsArticle.appendChild(emittingItem);
-    optionsArticle.appendChild(label); 
+    optionsArticle.appendChild(label);
 
     optionsArticle.classList.add('optionArticle')
-    
-    // Add click handler to store the selected item
-    // label.addEventListener('click', () => {
-    //   selectedItems.push({
-    //     ...categoryItem,
-    //     category: categories[category]
-    //   });
-    //   updateSelectedItemsDisplay();
-    // });
   });
 
   fromSections.appendChild(optionsArticle);
-} 
+}
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault();
     console.log("Form submitted!");
 
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    let formData = new FormData(form);
+    let data = Object.fromEntries(formData.entries()); 
 
-    console.log(data); // or process it however you want
+
+    console.log(Object.keys(data)); 
+
+    summaryAnalytics(data) 
+
   });
 });

@@ -94,4 +94,37 @@ form {
   height: 100px; 
   width: 100px; 
   box-shadow:  12px 12px 12px #300c0841;
+} 
+
+.modal-content { 
+   background-color: #ecd2a9 !important; 
+
+
+} 
+
+.col-md-4 { 
+  background-color: #271e15 !important;
+  width: 40vh !important;
+} 
+
+#activity-chart {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px; 
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+} 
+
+.modal-body {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+canvas { 
+  height: 100% !important; 
+  width: 100% !important;  
+
 }

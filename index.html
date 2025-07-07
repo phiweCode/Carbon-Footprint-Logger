@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,99 +8,111 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="./src/app/app.js" defer></script>
   <title>Carbon Footprint Logger</title>
 </head>
 
 <body>
-    
 
-    <main id="main"> 
 
-      <nav id="main-nav">
-  
-       <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
-            <a class="navbar-brand" href="#">
-                  <div>
-        <article id="logo">
-          <figure>
-            <img src="./logo-carbon-footprint-removebg-preview (2).svg" alt="footprint-logger-logo" height="100px" />
-          </figure>
-        </article>
-      </div> 
-            </a>
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link btn-custom-color" href="#scrollspyHeading0">Transportation</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link  btn-custom-color" href="#scrollspyHeading1">Food and Diet</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle ml-9" data-bs-toggle="dropdown" href="#" role="button"
-                  aria-expanded="false">More</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading2">Home and Energy</a></li>
-                  <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading3">Consumption and Waste</a></li>
-                  <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading4">Water Usage</a></li>
-                  <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading5">Digital Habits</a></li>
-                  <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading6">Work and Commuting</a></li>
-                </ul>
-              </li>
+  <main id="main"> 
+
+
+
+    <nav id="main-nav">
+
+      <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#">
+          <div>
+            <article id="logo">
+              <figure>
+                <img src="./logo-carbon-footprint-removebg-preview (2).svg" alt="footprint-logger-logo"
+                  height="100px" />
+              </figure>
+            </article>
+          </div>
+        </a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link btn-custom-color" href="#scrollspyHeading0">Transportation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  btn-custom-color" href="#scrollspyHeading1">Food and Diet</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ml-9" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading2">Home and Energy</a></li>
+              <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading3">Consumption and Waste</a></li>
+              <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading4">Water Usage</a></li>
+              <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading5">Digital Habits</a></li>
+              <li><a class="dropdown-item btn-custom-color" href="#scrollspyHeading6">Work and Commuting</a></li>
             </ul>
-          </nav>
-    </nav>
+          </li>
+        </ul>
+      </nav>
+    </nav>  
 
-      <section id="user-input" class="d-flex flex-column gap-3 justify-content-center align-items-center">
-        <form action="" style="max-width: 100%;"> 
+    <section id="user-input" class="d-flex flex-column gap-3 justify-content-center align-items-center"> 
+   
+      <form action="" style="max-width: 100%;">
 
-              <section id="dashboard">
+        <section id="dashboard">
           <div class="modal-body">
-  <div id="myModal" class="container-fluid">
-    <div class="row">
-      <div class="col-md-4">.col-md-4</div>
-      <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
-      <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-9">
-        Level 1: .col-sm-9
-        <div class="row">
-          <div class="col-8 col-sm-6">
-            Level 2: .col-8 .col-sm-6
           </div>
-          <div class="col-4 col-sm-6">
-            Level 2: .col-4 .col-sm-6
-          </div>
+        </section>
+
+
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+          data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2 form-sections" tabindex="0">
         </div>
+
+        <button id="submit" type="submit" class="submit-btn btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Review
+          Summary </button>
+      </form>
+    </section>
+
+
+
+  </main> 
+
+  
+     
+
+
+
+<!-- Modal -->
+<div class="modal fade modal-custom-styles" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Your Carbon Footprint Summary.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+ <div class="modal-body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col "> 
+          <canvas id="activity-chart"></canvas>
       </div>
     </div>
   </div>
 </div>
-      </section>
-         
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-            data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2 form-sections" tabindex="0">
-          </div>
 
-          <button id="submit" type="submit" class="submit-btn btn" data-bs-toggle="modal" data-bs-target="#myModal">Review Summary </button>
-        </form>
-      </section>
-
-  
-
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>

@@ -111,12 +111,17 @@ for (const category in categories) {
     
     // Create text span
     const textSpan = document.createElement('span');
-    textSpan.textContent = categoryItem.item || categoryItem.mode || categoryItem.activity; 
+    textSpan.textContent = categoryItem.item || categoryItem.mode || categoryItem.activity;  
+
+    //add carbon-foot-print-text
+    const carbonEmissionVal = document.createElement('h5'); 
+    carbonEmissionVal.textContent = categoryItem.factor + categoryItem["unit_output"] 
 
     //item container 
     itemContainer.appendChild(iconSpan) 
+    itemContainer.appendChild(carbonEmissionVal) 
     itemContainer.appendChild(textSpan)
-    itemContainer.classList.add('d-flex', 'flex-column', 'gap-5','justify-content-center', 'align-items-center')
+    itemContainer.classList.add('d-flex', 'flex-column', 'gap-3','justify-content-center', 'align-items-center')
     
     // Append icon and text to label
     label.appendChild(itemContainer);
@@ -126,7 +131,7 @@ for (const category in categories) {
     optionsArticle.appendChild(emittingItem);
     optionsArticle.appendChild(label); 
 
-    optionsArticle.classList.add('d-flex', 'justify-content-center', 'align-items-center')
+    optionsArticle.classList.add('optionArticle')
     
     // Add click handler to store the selected item
     // label.addEventListener('click', () => {

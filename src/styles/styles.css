@@ -3,4 +3,21 @@
 }
 .me-2 {
   margin-right: 0.5rem;
-}
+} 
+
+.optionArticle { 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 5vh;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 128, 0, 0.115); 
+  padding: 10vh; 
+  border-radius: 5px;
+} 
+
+h4 { 
+    margin: 3vh 0 !important;
+} 

@@ -51,21 +51,49 @@
     </nav>
 
       <section id="user-input" class="d-flex flex-column gap-3 justify-content-center align-items-center">
+        <form action="" style="max-width: 100%;"> 
 
-        <form action="" style="max-width: 100%;">
+              <section id="dashboard">
+          <div class="modal-body">
+  <div id="myModal" class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+      <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        Level 1: .col-sm-9
+        <div class="row">
+          <div class="col-8 col-sm-6">
+            Level 2: .col-8 .col-sm-6
+          </div>
+          <div class="col-4 col-sm-6">
+            Level 2: .col-4 .col-sm-6
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </section>
          
 
           <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
             data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2 form-sections" tabindex="0">
           </div>
 
-          <button id="submit" type="submit" class="submit-btn btn">Review Summary </button>
+          <button id="submit" type="submit" class="submit-btn btn" data-bs-toggle="modal" data-bs-target="#myModal">Review Summary </button>
         </form>
       </section>
 
-      <section id="dashboard">
-          <aside></aside>
-      </section>
+  
 
     </main>
 

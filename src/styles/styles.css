@@ -21,11 +21,23 @@ body {
   padding: 5vh; 
   border-radius: 5px;
   margin-bottom: 15vh;
+  background-color: bisque;
 } 
-
+label { 
+    padding: 20px 15px !important;
+}
 h4 { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     text-align: center;
     margin: 2vh 0 !important;
+    font-weight: bolder !important;
+    color: #c74d3f !important;
+    font-size: 2.2em !important;
+    background-color: bisque;
+    height: 8vh;
+    border-radius: 5px;
 } 
 
 i {
@@ -42,4 +54,8 @@ i {
     top: 0; /* or any offset you want */ 
     background-color: #ecd2a9 !important;
     z-index: 100;
+} 
+
+.scrollspy-example { 
+      background-color: #ecd2a9 !important;
 }

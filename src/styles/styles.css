@@ -1,3 +1,8 @@
+body { 
+    position: relative; 
+    height: 100vh; 
+    background-color: #ecd2a9 !important;
+}
 .btn span {
   vertical-align: middle;
 }
@@ -13,11 +18,28 @@
   justify-items: center;
   padding: 10px;
   overflow: hidden;
-  background-color: rgba(0, 128, 0, 0.115); 
-  padding: 10vh; 
+  padding: 5vh; 
   border-radius: 5px;
+  margin-bottom: 15vh;
 } 
 
 h4 { 
-    margin: 3vh 0 !important;
+    text-align: center;
+    margin: 2vh 0 !important;
 } 
+
+i {
+    color: #c74d3f!important;
+    transform: scale(2);
+}
+
+#main-nav {  
+    position: sticky;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 5vh;
+    top: 0; /* or any offset you want */ 
+    background-color: #ecd2a9 !important;
+    z-index: 100;
+}

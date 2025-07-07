@@ -14,11 +14,12 @@ const categories = [
 ]
 
 // console.log(categories)
-import emissionFactors from "./data.js";
+import emissionFactors from "./data.js"; 
+
 
 const data = emissionFactors; 
 const selectedItems = [];
-
+const form = document.getElementsByName('form'); 
 // console.log("data", data)
 // console.log(data['Transportation'].map(item=>item))
 
@@ -98,6 +99,8 @@ for (const category in categories) {
     emittingItem.classList.add('btn-check');
     emittingItem.id = id;
     emittingItem.autocomplete = "off";
+    emittingItem.value = [ categoryItem.factor , categories[category]]; 
+    emittingItem.name = categoryItem.item || categoryItem.mode || categoryItem.activity;
     
     // Create label with icon
     const label = document.createElement('label');
@@ -144,4 +147,17 @@ for (const category in categories) {
   });
 
   fromSections.appendChild(optionsArticle);
-}
+} 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // prevent page reload
+    console.log("Form submitted!");
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    console.log(data); // or process it however you want
+  });
+});

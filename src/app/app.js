@@ -13,6 +13,7 @@ const data = emissionFactors;
 const selectedItems = [];
 const form = document.getElementsByName('form'); 
 const activityContext = document.getElementById('activity-chart'); 
+const categoriesContext = document.getElementById('categories-chart'); 
 
 
 const fromSections = document.querySelector('.form-sections'); 
@@ -32,11 +33,50 @@ const summaryAnalytics = (data) => {
       type: 'line', 
       data: activityData
     }  
-    new Chart(activityContext, activityConfig) 
+    new Chart(activityContext, activityConfig)  
 
-    
 
-    console.log(activityData)
+    const categoriesData = { 
+      labels: categories, 
+      datasets: [
+        {
+          label: 'My carbon footprint by categories', 
+          data: categories.map(category => { 
+              return Object.values(data).reduce((accum, curr) => {
+                const [valueStr, cat] = curr.split(',');
+                const value = parseFloat(valueStr);
+
+                if (cat.trim() === category.trim()) {
+                  return accum + value;
+                }
+
+                return accum;
+              }, 0);
+            }), 
+            backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+            'rgb(255, 205, 86)',
+            'rgb(201, 203, 207)',
+            'rgb(54, 162, 235)',
+            'rgb(139, 194, 28)',
+            'rgb(142, 15, 77)'
+          ]
+        }
+      ]
+    } 
+
+    const categoriesConfig = {
+        type: 'polarArea',
+        data: categoriesData,
+        options: {}
+      }; 
+
+    new Chart(categoriesContext, categoriesConfig)  
+
+
+
+    console.log("Categories Data", categoriesData)
 
 }
 

@@ -107,7 +107,7 @@ form {
   width: 40vh !important;
 } 
 
-#activity-chart {
+#activity-chart, #categories-chart {
   position: relative;
   z-index: 10;
   background-color: white;
